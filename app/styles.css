@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 100vh;
+}
+
+.mapboxgl-popup-content {
+    padding-bottom: 8px;
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+}
