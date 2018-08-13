@@ -1,12 +1,15 @@
 /*global importScripts supercluster */
 importScripts('../external/supercluster.js');
 
+
+//TODO - Find a way to import constants here, copying here for now
+//Using es5 as this file is not transpiled
+
 var CLUSTER_WORKER_OPS = {
     init: 'init',
     getClusters: 'getClusters',
     getClusterExpansionZoom: 'getClusterExpansionZoom'
 };
-
 
 var CLUSTER_WORKER_EVENTS = {
     updatePoints: 'updatePoints',
@@ -46,7 +49,6 @@ self.onmessage = function (e) {
             break;
         case CLUSTER_WORKER_OPS.getClusterExpansionZoom:
             postClusterExpansionZoom(data.clusterId, data.center);
-
     }
 };
 
